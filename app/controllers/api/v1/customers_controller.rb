@@ -7,9 +7,4 @@ class Api::V1::CustomersController < ApplicationController
       render json: {errors: {details: 'This customer id does not exist.'}}, status: 404
     end
   end
-
-  private
-  def customer_params
-    params.permit(:first_name, :last_name, :email, :address)
-  end
 end
