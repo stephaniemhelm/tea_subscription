@@ -6,16 +6,28 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require 'factory_bot_rails'
+customer_1 = Customer.create(first_name: "Sage", last_name: "Liliane", email: "sage@example.com", address: "Buena Vista, CO")
+customer_2 = Customer.create(first_name: "Cindy", last_name: "Lou", email: "cindy@example.com", address: "Buena Vista, CO")
+customer_1 = Customer.create(first_name: "Seth", last_name: "Kfman", email: "seth@example.com", address: "Denver, CO")
 
-10.times do
-  FactoryBot.create(:customer)
-end
+green = Tea.create(title: "green", description: "Rich in antioxidants and reduces inflammation.", temperature: 80, brew_time: 2)
+black = Tea.create(title: "black", description: "Boosts heart health and lowers cholesterol.", temperature: 85, brew_time: 3)
 
-10.times do
-  FactoryBot.create(:tea)
-end
+subscription_1 = Subscription.create(title: "Tea Lovers", price: 35, frequency: 15, customer_id: customer_1.id, tea_id: green.id)
+subscription_1 = Subscription.create(title: "Tea Drinkers", price: 45, frequency: 30, customer_id: customer_2.id, tea_id: black.id)
 
-(1..10).each do |i|
-  FactoryBot.create(:subscription, customer_id: i, tea_id: i)
-end
+
+
+# require 'factory_bot_rails'
+#
+# 10.times do
+#   FactoryBot.create(:customer)
+# end
+#
+# 10.times do
+#   FactoryBot.create(:tea)
+# end
+#
+# (1..10).each do |i|
+#   FactoryBot.create(:subscription, customer_id: i, tea_id: i)
+# end
