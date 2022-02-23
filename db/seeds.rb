@@ -13,8 +13,8 @@ customer_1 = Customer.create(first_name: "Seth", last_name: "Kfman", email: "set
 green = Tea.create(title: "green", description: "Rich in antioxidants and reduces inflammation.", temperature: 80, brew_time: 2)
 black = Tea.create(title: "black", description: "Boosts heart health and lowers cholesterol.", temperature: 85, brew_time: 3)
 
-subscription_1 = Subscription.create(title: "Tea Lovers", price: 35, frequency: 15, customer_id: customer_1.id, tea_id: green.id)
-subscription_1 = Subscription.create(title: "Tea Drinkers", price: 45, frequency: 30, customer_id: customer_2.id, tea_id: black.id)
+subscription_1 = Subscription.create(title: "Tea Lovers", price: 35, status: true, frequency: 15, customer_id: customer_1.id, tea_id: green.id)
+subscription_1 = Subscription.create(title: "Tea Drinkers", price: 45, status: true, frequency: 30, customer_id: customer_2.id, tea_id: black.id)
 
 
 
