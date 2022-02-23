@@ -46,7 +46,11 @@ RSpec.describe "Customer API" do
                   customer_id: customer.id,
                   tea_id: green.id
                 }
+    new_subscription = Subscription.update(subscription_params)
+
     patch "/api/v1/customers/#{customer.id}/subscriptions/#{subscription_1.id}"
-    #require "pry"; binding.pry
+
+    subscription_data = JSON.parse(response.body, symbolize_names: true)
+    expect(response).to be_successful
   end
 end
