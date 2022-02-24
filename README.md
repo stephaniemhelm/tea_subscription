@@ -12,7 +12,7 @@ cd into desired directory
 git clone https://github.com/stephaniemhelm/tea_subscription
 cd tea_subscription
 bundle install
-rails db:{create,migrate}
+rails db:{create,migrate,seed}
 bundle exec rspec
 rails server
 ```
