@@ -22,7 +22,7 @@ rails server
 - [Tea API](https://tea-api-vic-lo.herokuapp.com/)
 - [Tea API GitHub](https://github.com/victoria-lo/TAPI)
 
-Navigate to Postman:
+Navigation to View Endpoints:
 ```
 In terminal: rails server
 Use Postman to view endpoints
