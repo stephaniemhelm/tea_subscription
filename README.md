@@ -14,6 +14,7 @@ cd tea_subscription
 bundle install
 rails db:{create,migrate,seed}
 bundle exec rspec
+all tests pass
 rails server
 ```
 
