@@ -3,6 +3,7 @@ class Api::V1::SubscriptionsController < ApplicationController
   def index
     customer = Customer.find(params[:customer_id])
     subscriptions = customer.subscriptions.find_all
+    
     if customer.subscriptions == []
       render json: {errors: {details: 'This subscription id or customer id does not exist.'}}, status: 404
     else
