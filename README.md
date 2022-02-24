@@ -31,7 +31,11 @@ localhost:3000
 
 ## Requesting Database Endpoint Items
 
-- `GET /api/v1/forecast?location=`                 :uses location parameter to consume and expose the forecast for the location
-- `GET /api/v1/image?location=`                    :uses location parameter to consume and expose an image for the location
-- `POST /api/v1/users`                             :creates a new user in the database and generates a unique api key
-- `POST /api/v1/sessions`                          :creates a new session for the user after verifying email and password
+- `GET /api/v1/:customer_id/subscriptions`                    :view all customer's subcriptions(active and cancelled)
+- `POST /api/v1/:customer_id/subscriptions`                   :creates a new subscription for given customer
+- `PATCH /api/v1/:customer_id/subscriptions`                  :updates customer's subscription (activate or cancel)
+- `GET /api/v1/customers/:id`                                 :view customer information by id
+- `GET /api/v1/teas/:id`                                      :view tea information by id
+
+## Database Schema
+<img width="591" alt="Screen Shot 2022-02-21 at 8 34 40 AM" src="https://user-images.githubusercontent.com/81917337/155583474-013b4780-f78c-4c33-9101-cbfcc648e49a.png">
