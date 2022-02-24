@@ -1,4 +1,4 @@
-![Screen Shot 2022-02-24 at 2 33 06 PM](https://user-images.githubusercontent.com/81917337/155611392-32625ee8-49a7-4054-8ddc-90ac5b174f82.png)
+
 # Tea Subscription
 
 Tea Subscription is a Ruby on Rails Application used to create, update, and expose data from the application's database.  
@@ -44,3 +44,4 @@ localhost:3000
 <img width="591" alt="Screen Shot 2022-02-21 at 8 34 40 AM" src="https://user-images.githubusercontent.com/81917337/155583474-013b4780-f78c-4c33-9101-cbfcc648e49a.png">
 
 ## Example GET Request
+![Screen Shot 2022-02-24 at 2 33 06 PM](https://user-images.githubusercontent.com/81917337/155611392-32625ee8-49a7-4054-8ddc-90ac5b174f82.png)
