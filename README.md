@@ -1,24 +1,37 @@
-# README
+# Tea Subscription
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tea Subscription is a Ruby on Rails Application used to consume and expose data.  The data is exposed through 5 different endpoints.
 
-Things you may want to cover:
+This application uses Ruby 2.7.2 and Rails 5.2.6.
 
-* Ruby version
+## Application Setup 
 
-* System dependencies
+Follow these steps from terminal:
+```
+cd into desired directory
+git clone https://github.com/stephaniemhelm/tea_subscription
+cd tea_subscription
+bundle install
+rails db:{create,migrate}
+bundle exec rspec
+rails server
+```
 
-* Configuration
+## Tea API:
 
-* Database creation
+- [Tea API](https://tea-api-vic-lo.herokuapp.com/)
+- [Tea API GitHub](https://github.com/victoria-lo/TAPI)
 
-* Database initialization
+Navigate to Postman:
+```
+In terminal: rails server
+Use Postman to view endpoints
+localhost:3000
+```
 
-* How to run the test suite
+## Requesting Database Endpoint Items
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- `GET /api/v1/forecast?location=`                 :uses location parameter to consume and expose the forecast for the location
+- `GET /api/v1/image?location=`                    :uses location parameter to consume and expose an image for the location
+- `POST /api/v1/users`                             :creates a new user in the database and generates a unique api key
+- `POST /api/v1/sessions`                          :creates a new session for the user after verifying email and password
