@@ -15,7 +15,7 @@ RSpec.describe "Customer API" do
     expect(response).to be_successful
   end
 
-  xit 'can create a subscription' do
+  it 'can create a subscription' do
     customer = Customer.create(first_name: "Shelly", last_name: "Rio", email: "shelly@example.com", address: "Denver")
     green = Tea.create(title: "green", description: "Rich in antioxidants and reduces inflammation.", temperature: 80, brew_time: 2)
 
@@ -27,7 +27,7 @@ RSpec.describe "Customer API" do
                   customer_id: customer.id,
                   tea_id: green.id
                 }
-    post "/api/v1/customers/#{customer.id}/subscriptions"
+    post "/api/v1/customers/#{customer.id}/subscriptions", params: subscription_params
     subscription_data = JSON.parse(response.body, symbolize_names: true)
     #require "pry"; binding.pry
     expect(response).to be_successful
@@ -51,6 +51,7 @@ RSpec.describe "Customer API" do
     patch "/api/v1/customers/#{customer.id}/subscriptions/#{subscription_1.id}"
 
     subscription_data = JSON.parse(response.body, symbolize_names: true)
+    #require "pry"; binding.pry
     expect(response).to be_successful
   end
 end

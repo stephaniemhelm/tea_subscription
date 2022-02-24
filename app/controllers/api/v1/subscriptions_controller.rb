@@ -6,15 +6,14 @@ class Api::V1::SubscriptionsController < ApplicationController
     if customer.subscriptions == []
       render json: {errors: {details: 'This subscription id or customer id does not exist.'}}, status: 404
     else
-      #render json: SubscriptionSerializer.new(Subscription.all.where(customer_id: customer.id))
       render json: SubscriptionSerializer.new(subscriptions)
     end
   end
 
   def create
     customer = Customer.find(params[:customer_id])
-
     subscription = Subscription.create(subscription_params)
+
     if subscription.save
       render json: SubscriptionSerializer.new(subscription)
     else
@@ -23,9 +22,9 @@ class Api::V1::SubscriptionsController < ApplicationController
   end
 
   def update
-    #require "pry"; binding.pry
     subscription = Subscription.find(params[:id])
     subscription.update(subscription_params)
+
     if subscription.save
       render json: SubscriptionSerializer.new(subscription)
     else
@@ -33,8 +32,10 @@ class Api::V1::SubscriptionsController < ApplicationController
     end
   end
 
+
+
   private
   def subscription_params
-    params.permit(:id, :title, :status, :frequency, :customer_id, :tea_id)
+    params.permit(:id, :title, :status, :price, :frequency, :customer_id, :tea_id)
   end
 end
