@@ -1,6 +1,6 @@
 # Tea Subscription
 
-Tea Subscription is a Ruby on Rails Application used to expose data from the application's database.  
+Tea Subscription is a Ruby on Rails Application used to create, update, and expose data from the application's database.  
 The data is exposed through 5 different endpoints.
 
 This application uses Ruby 2.7.2 and Rails 5.2.6.
