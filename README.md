@@ -45,3 +45,10 @@ localhost:3000
 
 ## Example GET Request
 ![Screen Shot 2022-02-24 at 2 33 06 PM](https://user-images.githubusercontent.com/81917337/155611392-32625ee8-49a7-4054-8ddc-90ac5b174f82.png)
+
+## Example POST Request
+![Screen Shot 2022-02-24 at 2 36 33 PM](https://user-images.githubusercontent.com/81917337/155611695-f2c84ff9-9fd7-4f30-b66b-6e69b8ddb91a.png)
+
+## Example PATCH Request
+![Screen Shot 2022-02-24 at 2 37 47 PM](https://user-images.githubusercontent.com/81917337/155611887-5236acdd-2fcf-4333-91d3-b3955d30d93d.png)
+
